@@ -23,7 +23,11 @@ int main()
     else
         result = -10;
 
-    std::int32_t result2 = b1 == true ? 10 : -10; // ternary
+    std::cout << result << '\n';
+
+    std::int32_t result2 = b1 == true ? -10 : 10; // ternary
+
+    std::cout << result2 << '\n';
 
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <cstdint>
 #include <iostream>
 
-void printer(std::int32_t value);
+void printer(std::uint16_t); 
 
 int main()
 {
@@ -10,7 +10,6 @@ int main()
     return 0;
 }
 
-void printer(std::int32_t value)
-{
-    std::cout << value << '\n';
+void printer(std::uint16_t val){
+    std::cout << val << '\n';
 }
