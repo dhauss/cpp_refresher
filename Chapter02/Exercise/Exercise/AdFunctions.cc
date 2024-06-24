@@ -36,7 +36,7 @@ namespace Ad
         {
             std::cout << "ID: " << vehicle.id;
             std::cout << "\nSpeed: " << vehicle.speed_mps;
-            std::cout << "\nDistance" << vehicle.distance_m << '\n';
+            std::cout << "\nDistance: " << vehicle.distance_m << '\n';
             std::cout << "Lane: " << static_cast<std::int32_t>(vehicle.lane) << '\n';
         }
     } // Vizualize
