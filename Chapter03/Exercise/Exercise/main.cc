@@ -11,9 +11,7 @@ int main()
     auto vehicles = Ad::Data::init_vehicles();
     Ad::Visualize::print_vehicle(ego_vehicle);
     Ad::Visualize::print_neighbor_vehicles(vehicles);
-/*
-
     Ad::Visualize::print_scene(ego_vehicle, vehicles);
-*/
+    
     return 0;
 }
