@@ -14,25 +14,31 @@ namespace mystd{
             {
                 ++it;
             }
-        } else{
-
+        } else
+        {
             for(std::int32_t i = n; i <= 0; i++)
             {
                 --it;
             }
         }
     }
-    /*
+
     DifferenceType distance(It first, It last)
     {
+        return std::distance(first, last);
     }
     
-    It next(It it, DifferenceType n = 1)
+    
+    It next(It it, DifferenceType n)
     {
+        mystd::advance(it, n);
+        return it;
     }
     
-    It prev(It it, DifferenceType n = 1)
+    It prev(It it, DifferenceType n)
     {
+        mystd::advance(it, -n);
+        return it;
     }
-*/
+
 } // mystd
