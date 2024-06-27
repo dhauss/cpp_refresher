@@ -1,13 +1,15 @@
 #include <iostream>
 #include <vector>
-
+#include <array>
 #include "IteratorLib.h"
 
 int main()
 {
+
     auto vector = std::vector<int>{1, 2, 3};
     auto vector_it = vector.begin();
     auto vector_end = vector.end();
+    constexpr static auto n = 10000000000U;
 
     auto next_it = mystd::next(vector_it);
     std::cout << "*next_it: " << *next_it << '\n';
@@ -26,6 +28,18 @@ int main()
 
     auto dist2 = mystd::distance(vector.begin(), --vector.end());
     std::cout << "distance: " << dist2 << '\n';
+
+    // auto large_vector = std::vector<std::int32_t>(10000000000, 0);
+    auto large_vector = std::vector<std::int32_t>{};
+    for(size_t i = 0; i < n; i++){
+        large_vector.push_back(0);
+    }
+
+    auto dist4 = mystd::distance(large_vector.begin(), --large_vector.end());
+    std::cout << "distance: " << dist4 << '\n';
+
+    auto dist3 = mystd::distance(--large_vector.end(), large_vector.begin());
+    std::cout << "distance: " << dist3 << '\n';
 
     return 0;
 }

@@ -1,6 +1,7 @@
 #include <cstdint>
 #include <iterator>
 #include <vector>
+#include <iostream>
 
 #include "IteratorLib.h"
 
@@ -25,7 +26,12 @@ namespace mystd{
 
     DifferenceType distance(It first, It last)
     {
-        return std::distance(first, last);
+        // return std::distance(first, last);
+        auto first_address = &(*first);
+        auto last_address = &(*last);
+
+        return static_cast<DifferenceType>(last_address - first_address);
+
     }
     
     
