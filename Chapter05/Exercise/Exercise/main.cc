@@ -53,4 +53,18 @@ WordVector split_text(const std::string &text, char delimiter)
 
 CountedWordsMap count_words(const WordVector &words)
 {
+    auto word_map = CountedWordsMap{};
+
+    for(const auto &word: words)
+    {
+        if(!word_map.contains(word)) //C++ 20
+        {
+            word_map[word] = 1;
+        } else
+        {
+            word_map[word]++;
+        }
+    }
+
+    return word_map;
 }
