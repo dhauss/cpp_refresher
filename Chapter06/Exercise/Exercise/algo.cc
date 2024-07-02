@@ -1,10 +1,21 @@
-#include "algo.hpp"
+#include "algo.h"
 
 namespace mystd
 {
 
 bool equal(Iterator first1, Iterator last1, Iterator first2)
 {
+    while(first1 != last1)
+    {
+        if(*first1 != *first2)
+        {
+            return false;
+        }
+
+        first1++;
+        first2++;
+    }
+
     return true;
 }
 
