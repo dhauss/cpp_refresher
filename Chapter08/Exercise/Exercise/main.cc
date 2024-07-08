@@ -32,7 +32,7 @@ StringType to_lower_case(ViewType text);
 
 int main()
 {
-    auto input_text = std::string{};
+    auto input_text = std::string{"herKKLf"};
     std::cout << "Please enter any text: ";
     std::cin >> input_text;
 
